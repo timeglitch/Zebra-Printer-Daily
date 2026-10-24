@@ -12,7 +12,7 @@ AI Disclosure: Asked AI for help occasionally, but wrote all the code myself.
 You can tell b/c there are no useless tests, those are for cowards.
 
 ## TODO:
-- fix slight misalignment on left edge
+
 - make fonts better
 - use an alternative image creation system, and get higher quality cat photos
 - set up systemd service to run in the morning.

@@ -72,7 +72,7 @@ Highs of {weather.maxtemp:.1f} with lows of {weather.mintemp:.1f}
 
     catimg = ImageOps.scale(catimg, factor=5)
 
-    image.paste(catimg, (100, 400))
+    image.paste(catimg, (0, 400))
 
     quoteres = requests.get("https://dummyjson.com/quotes/random")
     if quoteres.status_code == 200:
@@ -83,7 +83,7 @@ Highs of {weather.maxtemp:.1f} with lows of {weather.mintemp:.1f}
 
     print("Printing Label")
 
-    zpl = ZebrafyImage(image=image, dither=True, format="Z64")
+    zpl = ZebrafyImage(image=image, dither=True, format="Z64", pos_x=100)
 
     ip = os.environ.get("PRINTER_IP")
     port = os.environ.get("PRINTER_PORT")
