@@ -1,0 +1,12 @@
+[Unit]
+Description=Run zebra_printer_daily.service every day
+
+[Timer]
+# Runs every morning.
+OnCalendar=*-*-* 08:40:00
+# Ensures the job runs if the computer was off at the scheduled time
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+

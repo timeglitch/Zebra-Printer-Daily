@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Zebra Printer Daily and print out something cool.
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=frank
+WorkingDirectory=/home/frank/Projects/zebra_printer_daily
+ExecStart=/home/frank/Projects/zebra_printer_daily/.venv/bin/zebra-printer-daily
+

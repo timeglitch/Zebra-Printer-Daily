@@ -12,9 +12,26 @@ Zebra printers are very simple label printers, so it'll only cost you like $800 
 AI Disclosure: Asked AI for help occasionally, but wrote all the code myself. 
 You can tell b/c there are no useless tests, those are for cowards.
 
+# Installation Guide
+
+1. Clone the repo to your computer. The python part should work on Mac and Windows as well, but I've only set up the timer for Linux.
+2. Set the env settings, then run `uv run zebra-printer-daily`. It should create a print.
+3. If you're on Mac or Windows, you're done!!!
+4. On linux, edit the paths for Execstart and WorkingDirectory in zebra_printer_daily.service so it points to where you downloaded the project.
+5. Install them to systemd with these commands:
+```
+sudo cp zebra_printer_daily.service zebra_printer_daily.timer /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable --now zebra_printer_daily.timer
+```
+6. Test print a label and check with these commands:
+```
+sudo systemctl start zebra_printer_daily.service
+journalctl -u zebra_printer_daily.service -n 30
+systemctl list-timers zebra_printer_daily.timer
+```
 
 ## TODO:
 
 - make fonts better
 - use an alternative image creation system, and get higher quality cat photos
-- set up systemd service to run in the morning.
