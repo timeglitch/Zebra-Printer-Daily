@@ -7,9 +7,11 @@ Currently, it'll tell you the time, weather, and have a image of a cat, saying a
 
 You'll need a zebra printer with 4" x 6" labels or thermal paper for this to work out of the box. 
 Zebra printers are very simple label printers, so it'll only cost you like $800 to buy one. 
+[<img alt="example label" src="https://github.com/timeglitch/Zebra-Printer-Daily/blob/main/zebralable.webp?raw=true">]
 
 AI Disclosure: Asked AI for help occasionally, but wrote all the code myself. 
 You can tell b/c there are no useless tests, those are for cowards.
+
 
 ## TODO:
 
